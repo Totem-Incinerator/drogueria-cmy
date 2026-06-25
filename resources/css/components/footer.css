@@ -1,0 +1,107 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* FOOTER */
+.footer {
+  background: linear-gradient(135deg, #0d2b45, #123a5c);
+  color: white;
+  width: 100%;
+  margin-top: 50px; /* 👈 espacio arriba */
+  padding: 40px 0;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+  margin: 15px;
+}
+
+/* TITULOS */
+.footer h2, .footer h3 {
+  margin-bottom: 15px;
+}
+
+.footer .sub {
+  color: #4caf50;
+  margin-bottom: 15px;
+}
+
+/* TEXTOS */
+.footer p {
+  color: #b0c4d4;
+  margin: 8px 0;
+}
+
+.footer i {
+  margin-right: 8px;
+  color: white;
+  align-items: center;
+}
+
+/* ENLACES */
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 10px 0;
+  color: #b0c4d4;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer ul li:hover {
+  color: #f7f7f7;
+  padding-left: 5px;
+}
+
+/* REDES SOCIALES */
+.socials a {
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+/* COLORES COMO LA IMAGEN */
+.fb { background: #3b5998; }
+.ig { background: radial-gradient(circle, #feda75, #d62976, #962fbf); }
+.wa { background: #25d366; }
+
+.socials a:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER FINAL */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  color: #ccc;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

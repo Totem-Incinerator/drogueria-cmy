@@ -1,0 +1,201 @@
+:root {
+        --primary-green: #157347;
+        --hover-green: #198754;
+        --light-bg: #f8f9fa;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Top Bar Minimalista */
+.top-bar {
+    background: var(--primary-green);
+    color: white;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background:#ffffff !important;
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+/* Botones del Menú */
+.nav-link {
+    color: #1e2a38 !important;
+    font-weight: 500;
+    padding: 0.8rem 1.2rem !important;
+    margin: 0 5px;
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+}
+
+/* Efecto Hover Moderno */
+.nav-link:hover {
+    color: white !important;
+    background-color: var(--primary-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(21, 115, 71, 0.3);
+}
+
+/* Opción Activa */
+.nav-link.active {
+    color: white !important;
+    background: #0b9c06; /* Un tono oscuro para resaltar el actual */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Línea decorativa debajo del logo */
+.navbar-nav {
+    align-items: center;
+}
+
+/* =========================
+   DESKTOP GRANDES
+========================= */
+@media (min-width: 1200px) {
+
+    .container{
+        max-width:1140px;
+        width:100%;
+        margin:auto;
+    }
+
+}
+/* =========================
+   LAPTOPS Y TABLETS GRANDES
+========================= */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .container{
+        max-width:960px;
+        width:100%;
+        margin:auto;
+    }
+
+}
+/* =========================
+   TABLETS
+========================= */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .container{
+        max-width:720px;
+        width:100%;
+        margin:auto;
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+}
+
+/* =========================
+   CELULARES
+========================= */
+@media (max-width: 767px) {
+
+    .container{
+        width:100%;
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+}
+/* =========================
+   BOTÓN HAMBURGUESA
+========================= */
+
+.navbar-toggler{
+    border:none !important;
+    box-shadow:none !important;
+    outline:none !important;
+}
+
+.navbar-toggler i{
+    font-size:2rem;
+    color:var(--primary-green);
+}
+
+/* =========================
+   MENÚ RESPONSIVE
+========================= */
+
+@media (max-width: 991px){
+
+    .navbar{
+        padding:0.8rem 0;
+    }
+
+    .navbar-brand img{
+        width:140px;
+    }
+
+    .navbar-collapse{
+        background:#ffffff;
+        margin-top:15px;
+        padding:20px;
+        border-radius:18px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+        animation:menuFade .3s ease;
+    }
+
+    .navbar-nav{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        gap:12px;
+    }
+
+    .nav-link{
+        width:100%;
+        padding:14px 18px !important;
+        margin:0;
+        border-radius:12px;
+        font-size:1rem;
+        display:flex;
+        align-items:center;
+        gap:10px;
+        border:1px solid #f1f1f1;
+    }
+
+    .nav-link:hover{
+        transform:none;
+    }
+
+}
+
+/* =========================
+   ANIMACIÓN MENÚ
+========================= */
+
+@keyframes menuFade{
+
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}

@@ -1,0 +1,289 @@
+:root {
+    --verde-oscuro: #1a3a32;
+    --verde-claro: #d8f3dc;
+    --verde-acento: #74c69d;
+}
+
+.seccion-ubicaciones {
+    background-color: #f0f7f4;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.tabla-contenedor {
+    max-height: 1800px;
+    margin: 40px auto;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--verde-acento) transparent;
+    
+}
+
+.table thead th {
+    
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border: none;
+}
+#tabla-sedes {
+    font-size: 1.05rem; /* 🔥 más grande */
+}
+
+#tabla-sedes thead th {
+    font-size: 1.1rem;
+    padding: 14px;
+}
+
+#tabla-sedes tbody td {
+    padding:
+     16px;
+}
+#tabla-sedes tbody tr {
+    height: auto;
+}
+#tabla-sedes td,
+#tabla-sedes th {
+    vertical-align: middle;
+}
+.punto-fila data-img{
+    width:200%;
+    height:100%;
+    object-fit: cover; /*  hace que TODAS tengan mismo tamaño */
+
+   
+}
+.punto-fila {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Solo para las filas de la tabla */
+tr.punto-fila {
+    width: 300px;
+    height: 100px;
+}
+.punto-fila td:first-child {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.punto-fila:hover {
+    background-color: #a2afa6 !important;
+}
+
+.punto-fila.active {
+    background-color: var(--verde-claro) !important;
+     border-left: 1px solid var(--verde-oscuro) !important;
+}
+
+#mapa-visor {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+}
+
+.visor-card {
+    border: none;
+    border-radius: 20px;
+    background: white;
+}
+
+.btn-google {
+    background-color: var(--verde-oscuro);
+    color: white;
+    border-radius: 50px;
+    transition: transform 0.2s;
+}
+
+.btn-google:hover {
+    background-color: #2d6a4f;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Estilos de interactividad */
+.punto-fila.active {
+    background-color: #d8f3dc !important;
+    border-left: 6px solid #1a3a32 !important;
+}
+.punto-fila:hover:not(.active) {
+    background-color: #f1f8f5 !important;
+}
+/* Scrollbar personalizado para la tabla */
+.table-responsive::-webkit-scrollbar { width: 8px; }
+.table-responsive::-webkit-scrollbar-thumb { background: #1a3a32; border-radius: 10px; }
+
+/* =========================
+   DESKTOP GRANDES
+========================= */
+@media (min-width: 1200px) {
+
+    .container{
+        max-width:1140px;
+        width:100%;
+        margin:auto;
+    }
+
+}
+/* =========================
+   LAPTOPS Y TABLETS GRANDES
+========================= */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .container{
+        max-width:960px;
+        width:100%;
+        margin:auto;
+    }
+
+}
+/* =========================
+   TABLETS
+========================= */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .container{
+        max-width:720px;
+        width:100%;
+        margin:auto;
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+}
+
+/* =========================
+   CARDS MÓVIL
+========================= */
+.sedes-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 520px;
+    overflow-y: auto;
+    padding-right: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--verde-acento) transparent;
+}
+
+.sedes-cards-container::-webkit-scrollbar {
+    width: 6px;
+}
+.sedes-cards-container::-webkit-scrollbar-thumb {
+    background: var(--verde-acento);
+    border-radius: 10px;
+}
+
+.sede-card {
+    border-radius: 14px;
+    border: 2px solid #e0ede8;
+    background: #ffffff;
+    overflow: visible;
+    box-shadow: 0 2px 8px rgba(26, 58, 50, 0.08);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+    height: auto !important;
+    width: auto !important;
+}
+
+.sede-card:hover {
+    box-shadow: 0 4px 16px rgba(26, 58, 50, 0.18);
+    border-color: var(--verde-acento);
+}
+
+.sede-card.active {
+    border-left: 5px solid var(--verde-oscuro) !important;
+    background-color: var(--verde-claro) !important;
+    border-color: var(--verde-oscuro);
+}
+
+.sede-card-header {
+    background-color: var(--verde-oscuro);
+    padding: 11px 16px;
+}
+
+.sede-card.active .sede-card-header {
+    background-color: #2d6a4f;
+}
+
+.sede-card-nombre {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.sede-card-body {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.sede-card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.88rem;
+    border-bottom: 1px dashed #d4e8dd;
+    padding-bottom: 6px;
+}
+
+.sede-card-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.sede-card-label {
+    color: #5a8070;
+    font-weight: 600;
+    min-width: 100px;
+}
+
+.sede-card-value {
+    color: #1a3a32;
+    font-weight: 500;
+    text-align: right;
+}
+
+.sede-tel {
+    color: var(--verde-oscuro);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid var(--verde-acento);
+}
+
+.sede-tel:hover {
+    color: #2d6a4f;
+}
+
+/* =========================
+   CELULARES
+========================= */
+@media (max-width: 767px) {
+
+    .container{
+        width:100%;
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    /* Reducir padding del contenedor principal */
+    .container-fluid.shadow-lg.bg-white.rounded-4 {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    /* El visor de imagen queda más compacto */
+    #mapa-visor {
+        height: 220px !important;
+    }
+
+    /* El mapa iframe también se reduce un poco */
+    .shadow-sm.rounded-4.overflow-hidden.border {
+        height: 300px !important;
+    }
+
+}

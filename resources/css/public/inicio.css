@@ -1,0 +1,592 @@
+body{
+    margin:0;
+    /* font-family:"Roboto", sans-serif; */
+    padding:0;
+    width:100%;
+    overflow-x:hidden;
+}
+
+/* slider */
+
+.swiper{
+    width:100%;
+    height:700px;
+    position: relative;
+    background: #FFFFFF;
+    background: radial-gradient(circle,rgba(255, 255, 255, 1) 92%, rgba(81, 153, 40, 1) 100%);
+}
+
+/* slide */
+
+.swiper-slide{
+    position: relative;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    overflow:hidden;
+    padding-left:70px;
+}
+
+/* texto grande */
+
+.titulo{
+    position: relative;
+    z-index: 2;
+    font-size:40px; /* más pequeño */
+    font-weight:bold;
+    color:#1f3c5c;
+    text-align:left;
+    max-width:320px;
+    padding:10px;
+    padding:15px 20px;
+    border-radius:12px;
+    background:rgba(255, 255, 255, 0.348);
+    backdrop-filter:blur(1px);
+}
+
+
+/* imagen */
+.imagen{
+    position: absolute;
+    right:0;
+    top:0;
+    width:75%;
+    height:100%;
+    z-index: 1;
+    
+}
+
+.imagen img{
+    width:100%;
+    height:100%;
+    object-fit: cover; /*  hace que TODAS tengan mismo tamaño */
+    opacity:1; /*  opacidad */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* menu vertical */
+.menu{
+    position:absolute;
+    left:120px;
+    bottom:80px;
+    z-index:3;
+}
+
+.menu div{
+    color:#265203;
+    margin:8px 0;
+    font-size: 20px;
+    transition:0.3s;
+}
+
+.menu .activo{
+    font-weight:bold;
+    transform:translateX(10px);
+    color:#1f3c5c;
+}
+
+
+
+/* CONTENEDOR DE LOS PASOS */
+.header-title{
+  margin-top: 20px;
+}
+.steps {
+    position: relative;
+    margin-top: 100px;
+}
+
+/* LÍNEA CENTRAL */
+.steps::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 15%;   /* antes 10% */
+    width: 70%;  /* antes 80% */
+    height: 2px;
+    background-color:rgb(32, 133, 86);
+    z-index: 0;
+}
+
+/* CÍRCULOS */
+.circle {
+    width: 70px;
+    height: 70px;
+    background-color: #e9ecef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-weight: bold;
+    color:rgb(7, 20, 30);
+    position: relative;
+    z-index: 1;
+}
+
+/* TEXTOS */
+.step-title {
+    margin-top: 15px;
+    font-weight: 600;
+    color:rgb(13, 13, 14);
+}
+.small{
+    color:rgb(13, 13, 14); 
+}
+/* seccion infromatica */
+
+.header-title {
+    font-weight: 700;
+    color: #1f3c5c;
+  }
+
+  .header-title span {
+    color: #2e7d32;
+  }
+
+  .step-card {
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+  }
+
+  .step-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .step-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+    color: #2e7d32;
+  }
+
+  .step-number {
+    width: 65px;
+    height: 65px;
+    background: #2e7d32;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .info-section {
+    background:rgb(0, 0, 0);
+    color: white;
+    border-radius: 20px;
+    padding: 30px;
+  }
+
+  .info-box {
+    text-align: center;
+  }
+
+  .info-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #4caf50;
+  }
+
+  .footer-bar {
+    background: #e8f5e9;
+    border-radius: 50px;
+    padding: 15px 25px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-custom {
+    background: #2e7d32;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+  }
+
+  .btn-custom:hover {
+    background: #256628;
+  }
+  /* Imagen orden */
+.img-orden {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+  }
+  
+  /* Imagen mapa */
+  .img-map {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+  
+  /* Imagen médica */
+  .img-medica {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+  }
+/* =========================================
+    1. noticias
+    ========================================= */
+
+/* Título */
+h2.titulo-seccion {
+    margin-bottom: 40px; /* Más espacio abajo */
+    text-align: center;
+    color: #38830d;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 2;
+    font-family: sans-serif; /* O tu fuente global */
+}
+
+.visor-carrusel {
+  
+    width: 100%;
+    height: 700px; /* Altura fija cómoda */
+    position: relative; 
+    object-fit: cover;
+    overflow: hidden; /* Oculta lo que no está en vista */
+}
+
+/* El Contenedor Ultra-Ancho: Este es el que se mueve */
+.contenedor-diapositivas {
+    display: flex; /* Pone las imágenes en fila (una al lado de la otra) */
+    height: 100%;
+    /* Transición suave y profesional para el movimiento horizontal */
+    transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform; /* Optimización para el navegador */
+}
+
+/* Cada Diapositiva individual */
+.slide-pro-horizontal {
+  min-width: 100%; /* esto es lo correcto en carruseles */
+  height: 100%;
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center; /* centra vertical */     
+}
+
+/* Estilo de la Imagen dentro */
+.slide-pro-horizontal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /*  todas iguales, sin deformarse */
+  border-radius: 15px;
+}
+/* NUESTROS SERVICIOS */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 40px;
+  color: #1e2a38;
+}
+
+.header h1 span {
+  color: #2e7d32;
+}
+
+.header p {
+  color: #6c757d;
+}
+
+.badge {
+  background: #e8f5e9;
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #2e7d32;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* ICONOS */
+.icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.green { background: #e8f5e9; color: #2e7d32; }
+.blue { background: #e3f2fd; color: #1976d2; }
+.yellow { background: #fff8e1; color: #f9a825; }
+
+/* BOTONES */
+.btn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.btn.green { background: #2e7d32; }
+.btn.blue { background: #1976d2; }
+.btn.yellow { background: #f9a825; }
+
+/* INFO */
+.info {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: #e8f5e9;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.info div {
+  text-align: center;
+  margin: 10px;
+}
+
+.info i {
+  font-size: 25px;
+  color: #2e7d32;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+    .steps::before {
+        display: none;
+    }
+}
+
+.imagen img{
+  padding: 1px;
+  max-width: 100%;
+  height: auto; 
+}
+
+
+/* =========================
+   DESKTOP GRANDES
+========================= */
+@media (min-width: 1200px) {
+
+  .visor-carrusel{
+    height:600px;
+  }
+
+  h2.titulo-seccion{
+      font-size:34px;
+}
+
+}
+/* =========================
+ LAPTOPS Y TABLETS GRANDES
+========================= */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .swiper{
+    height:500px;
+}
+
+.swiper-slide{
+    padding-left:40px;
+    padding-right:40px;
+}
+
+.titulo{
+    font-size:32px;
+    max-width:280px;
+    padding:12px 18px;
+}
+
+.imagen{
+    width:100%;
+    height:100%;
+}
+
+.imagen img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+
+.menu{
+    bottom:20px;
+    left:40px;
+}
+
+.menu div{
+    font-size:15px;
+}
+
+}
+/* =========================
+ TABLETS
+========================= */
+@media (min-width: 768px) and (max-width: 991px) {
+
+ 
+  .swiper{
+    height:500px;
+  }
+
+  .titulo{
+      font-size:30px;
+      margin-left:50px;
+      max-width:250px;
+  }
+
+  .menu{
+      left:50px;
+      bottom:40px;
+  }
+
+  .menu div{
+      font-size:16px;
+  }
+
+  .imagen{
+      width:80%;
+  }
+
+  .container{
+      max-width:720px;
+      width:100%;
+      margin:auto;
+      padding-left:15px;
+      padding-right:15px;
+  }
+  .visor-carrusel{
+    height:500px;
+  }
+
+  h2.titulo-seccion{
+      font-size:30px;
+      margin-bottom:25px;
+  }
+
+  .slide-pro-horizontal img{
+      border-radius:12px;
+  }
+
+}
+/* =========================
+ CELULARES
+========================= */
+@media (max-width: 767px) {
+
+.swiper{
+    height:320px;
+}
+
+.swiper-slide{
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.titulo{
+    font-size:24px;
+    max-width:220px;
+    padding:10px 15px;
+}
+.imagen img{
+  object-position:center;
+}
+
+/* menú abajo horizontal */
+.menu{
+    left:0;
+    bottom:10px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+  .menu div{
+      font-size:12px;
+      margin:0;
+      background:rgba(255,255,255,0.8);
+      padding:5px 10px;
+      border-radius:20px;
+  }
+
+  .container{
+      width:100%;
+      padding-left:15px;
+      padding-right:15px;
+  }
+  .visor-carrusel {
+    width: 100%;
+    height: 250px; /* ↓ más pequeña en celular */
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .slide-pro-horizontal img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+  }
+
+  h2.titulo-seccion {
+      font-size: 28px; /* título más pequeño */
+      margin-bottom: 20px;
+  }
+  .visor-carrusel{
+    height:300px;
+  }
+
+  h2.titulo-seccion{
+      font-size:24px;
+      margin-bottom:20px;
+      padding-left:10px;
+      padding-right:10px;
+  }
+
+  .slide-pro-horizontal img{
+      border-radius:10px;
+      object-position:center;
+  }
+
+
+}
